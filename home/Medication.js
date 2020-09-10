@@ -1,18 +1,26 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-function Medication() {
+import EachMed from './EachMed'
+
+
+
+function Medication(props) {
 
 
 
     return (
         <View style={{
-            backgroundColor: '#E5BCC5',
+            backgroundColor: '#feabbd',
             flex: 2,
             justifyContent: 'center',
             alignItems: 'center'
         }}>
-            <Text>Medication</Text>
+            <Text style={{
+                fontSize: 16,
+                padding: 10
+            }}>{props.patient}'s Medications</Text>
+            <EachMed meds={props.meds} />
         </View>
     )
 

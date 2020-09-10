@@ -1,7 +1,10 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-function Overview() {
+function Overview(props) {
+
+    //if any medications have been added in the last 14 days
+    //if any appointments have been made
 
 
     return (
@@ -11,6 +14,13 @@ function Overview() {
             alignItems: 'center'
 
         }}>
+            <Text
+                style={{
+                    fontSize: 20,
+                    alignSelf: 'flex-end'
+                }}
+                onClick={props.closeOverview}
+            >X</Text>
             <Text>Overview</Text>
         </View>
     )

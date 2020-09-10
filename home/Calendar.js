@@ -1,26 +1,19 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import WeeklyCalendar from 'react-native-weekly-calendar';
 
 function Calendar(props) {
-
-    // let calHeight = 4;
-
-    // if (props.showBanner === true) {
-    //     calHeight = 2;
-    // } else {
-    //     calHeight = 4;
-    // }
-
-
 
     return (
         <View style={{
             backgroundColor: 'white',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
             flex: 4,
-            justifyContent: 'center',
-            alignItems: 'center'
+            height: 'inherit',
+
         }}>
-            <Text>Calendar</Text>
+            <WeeklyCalendar events={props.calendar} themeColor='#cd3e59' style={{ height: 'inherit' }} />
         </View>
     )
 
