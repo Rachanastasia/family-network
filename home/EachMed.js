@@ -14,6 +14,11 @@ function EachMed(props) {
     //filter daily no-refill meds above everything else
 
 
+    //if med.refill = false && today-refillDate < 30
+    //filter arr
+    //filter not refilled
+    //put refilled first
+
 
 
     const eachMed = props.meds.map(med => {

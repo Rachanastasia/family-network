@@ -5,12 +5,14 @@ import Home from './home/Home';
 
 export default class App extends React.Component {
 
-  //   #1f050a black
-  // #fbf9f9 white
-  // #feabbd pink
-  // #ededed greypink
-  // #f7e4e8 lightpink
-  // #cd3e59 darkpink
+
+
+
+
+  //still be main componenet 
+  //login componenet  terniary operator
+  //show state based on that 
+
   constructor(props) {
     super(props);
 
@@ -103,7 +105,8 @@ export default class App extends React.Component {
           takeWithFood: false,
           refill: true,
           refillDate: new Date(),
-          contact: 'Carol Zimmerman'
+          contact: 'Carol Zimmerman',
+          added: new Date()
         },
         {
           name: 'Neropene',
@@ -112,7 +115,8 @@ export default class App extends React.Component {
           takeWithFood: false,
           refill: true,
           refillDate: new Date(),
-          contact: 'Jim Smith'
+          contact: 'Jim Smith',
+          added: new Date()
         },
         {
           name: 'Rydol',
@@ -121,14 +125,20 @@ export default class App extends React.Component {
           takeWithFood: false,
           refill: false,
           refillDate: null,
-          contact: 'Jim Smith'
+          contact: 'Jim Smith',
+          added: new Date()
         }
-      ]
+      ],
+      pharmacy: {
+        address: '124 Pharmacy Lane Chicago, IL 60625',
+        hours: '9:00AM to 5:00PM',
+        pharmacist: 'Dr. Kim'
+      }
     }
   }
 
 
-  closeOverview = e => {
+  closeOverview = () => {
     this.setState({
       showBanner: false
     })

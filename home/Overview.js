@@ -11,7 +11,8 @@ function Overview(props) {
         <View style={{
             flex: 4,
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            backgroundColor: '#cd3e59'
 
         }}>
             <Text

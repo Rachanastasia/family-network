@@ -6,6 +6,10 @@ import EachMed from './EachMed'
 
 
 function Medication(props) {
+    //make (HOOK???) that filters medications by importance
+    //returns filtered array
+    //pass in array of three to EachMed
+    //have expanded view where user can click and see all medications
 
 
 
