@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import WeeklyCalendar from 'react-native-weekly-calendar';
+import colors from '../colors';
 
 function Calendar(props) {
 
@@ -13,7 +14,7 @@ function Calendar(props) {
             height: 'inherit',
 
         }}>
-            <WeeklyCalendar events={props.calendar} themeColor='#cd3e59' style={{ height: 'inherit' }} />
+            <WeeklyCalendar events={props.calendar} themeColor={colors.bright} style={{ height: 'inherit', color: colors.black }} />
         </View>
     )
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-
+import colors from '../colors';
 import EachMed from './EachMed'
 
 
@@ -15,7 +15,7 @@ function Medication(props) {
 
     return (
         <View style={{
-            backgroundColor: '#feabbd',
+            backgroundColor: colors.bright,
             flex: 2,
             justifyContent: 'center',
             alignItems: 'center'

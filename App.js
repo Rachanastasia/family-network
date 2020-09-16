@@ -1,8 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import colors from './colors'
 import Home from "./home/Home";
-import Login from "./Login";
+// import Login from "./Login";
 
 export default class App extends React.Component {
   //still be main componenet
@@ -13,7 +14,6 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      showBanner: true,
       patientName: "Laura",
       patientId: "x029",
       familyMembers: [
@@ -149,21 +149,18 @@ export default class App extends React.Component {
     };
   }
 
-  closeOverview = () => {
-    this.setState({
-      showBanner: false,
-    });
-  };
+
 
   render() {
-    return <Login />;
+    return <Home state={this.state} />;
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: colors.white,
+    color: colors.black,
     alignItems: "center",
     justifyContent: "center",
   },
