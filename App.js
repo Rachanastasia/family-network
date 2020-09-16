@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Home from "./home/Home";
-import Login from "./Login";
+import Loginscreen from "./Login";
 
 export default class App extends React.Component {
   //still be main componenet
@@ -156,7 +156,7 @@ export default class App extends React.Component {
   };
 
   render() {
-    return <Login />;
+    return <Loginscreen />;
   }
 }
 
