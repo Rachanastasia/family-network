@@ -15,7 +15,7 @@ function MedRefillBanner(props) {
         justifyContent: 'flex-end',
         alignItems: 'center'
 
-    }}><Text styles={{ display: 'inline' }}>{med.name}</Text><Text> by {med.refillBefore}</Text><Text>from Doctor {med.contact}</Text></View>)
+    }}><Text styles={}> {med.name}</Text><Text> by {med.refillBefore}</Text><Text>from Doctor {med.contact}</Text></View>)
 
 
     return (
