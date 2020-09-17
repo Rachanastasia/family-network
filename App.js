@@ -3,8 +3,9 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import colors from './colors'
 import Home from "./home/Home";
-// import Login from "./Login";
+
 import STORE from './STORE'
+import Loginscreen from "./Login";
 
 export default class App extends React.Component {
   //still be main componenet
@@ -34,7 +35,7 @@ export default class App extends React.Component {
     return (
       this.state.isLoggedIn === true
         ? <Home state={this.state.user} />
-        : <Text>Login</Text>
+        : <LoginScreen />
     );
   }
 }
