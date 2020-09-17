@@ -6,8 +6,9 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import colors from './colors'
 
-export default class App extends React.Component {
+export default class Login extends React.Component {
   state = {
     email: "",
     password: "",
@@ -88,6 +89,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   loginText: {
-    color: "white",
+    color: colors.white,
   },
 });

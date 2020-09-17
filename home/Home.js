@@ -7,25 +7,35 @@ import UpcomingAppts from './UpcomingAppts';
 import Medication from './Medication';
 
 
-function Home(props) {
+class Home extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            showRefill: false
+        }
+    }
+
+    checkForRefills = (arr) => {
+        const mapped = arr.filter(med => med.hasRefill === false)
+
+    }
+
+    render() {
+        return (
+
+            <View>
+                { this.state.showRefill === true
+                    ? <Medication meds={this.props.state.medications} patient={props.state.patientName} />
+                    : null
+                }
+                <Calendar calendar={this.props.state.calendar} />
+            </View >
 
 
-    console.log('HI');
 
-
-    return (
-
-        <View>
-
-            //if medication needs refill within 30 days, put at top of screen in medication MedRefillBanner
-
-            <Medication meds={props.state.medications} patient={props.state.patientName} />
-            <Calendar calendar={props.state.calendar} />
-        </View >
-
-
-
-    )
+        )
+    }
 }
 
 

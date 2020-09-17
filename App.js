@@ -16,7 +16,7 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      isLoggedIn: false,
+      isLoggedIn: true,
       user: STORE
 
     }
