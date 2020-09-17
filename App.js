@@ -33,9 +33,13 @@ export default class App extends React.Component {
     //Place login componenet after Home
     //instead of Text Login
     return (
-      this.state.isLoggedIn === true
-        ? <Home state={this.state.user} />
-        : <LoginScreen />
+      <>
+        {
+          (this.state.isLoggedIn === true)
+            ? <Home state={this.state.user} />
+            : <Loginscreen />
+        }
+      </>
     );
   }
 }
