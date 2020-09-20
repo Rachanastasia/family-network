@@ -11,7 +11,7 @@ function MedRefillBanner(props) {
         .filter(med => med.hasRefill === false)
         .map((med) => <View key={med.name} style={{
             height: 100,
-            padding: 3,
+            padding: 10,
             display: 'flex',
             justifyContent: 'flex-start',
             alignItems: 'flex-start',
