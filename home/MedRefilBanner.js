@@ -1,32 +1,34 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import colors from '../colors';
-import EachMed from './EachMed'
+
 
 
 
 function MedRefillBanner(props) {
 
-    const mapped = props.meds.filter(med => med.hasRefill === false).map((med, id) => <View key={med.name} styles={{
-        flex: 3,
-        display: 'flex',
-        flexDirection: 'row',
-        width: 'inherit',
-        justifyContent: 'flex-end',
-        alignItems: 'center'
-
-    }}><Text> {med.name}</Text><Text> by {med.refillBefore}</Text><Text>from Doctor {med.contact}</Text></View>)
+    const mapped = props.meds
+        .filter(med => med.hasRefill === false)
+        .map((med) => <View key={med.name} style={{
+            height: 100,
+            padding: 3,
+            display: 'flex',
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            width: '100%'
+        }}><Text style={{ color: colors.white }}>{med.name}</Text><Text style={{ color: colors.white }}>Before {med.refillBefore}</Text><Text style={{ color: colors.white }}>from Doctor {med.contact}</Text></View>)
 
 
     return (
         <View style={{
             backgroundColor: colors.bright,
-            flex: 1,
             display: 'flex',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             alignItems: 'center',
-            height: '100%'
-        }}><Text style={{ flex: 1 }}>Refill Soon: </Text>
+            paddingTop: 20
+
+
+        }}><Text style={{ color: colors.white, fontSize: 15 }}>Refills: </Text>
             {mapped}
         </View>
     )

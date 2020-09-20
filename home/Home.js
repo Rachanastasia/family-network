@@ -1,9 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import Overview from './Overview';
 import Calendar from './Calendar';
-import UpcomingAppts from './UpcomingAppts';
 import Medication from './MedRefilBanner';
 
 
@@ -35,7 +33,7 @@ class Home extends React.Component {
 
         return (
 
-            <View>
+            <View style={{ width: '100%', height: '100%', display: 'flex' }}>
                 { this.state.showRefill === true
                     ? <Medication meds={this.props.state.medications} patient={this.props.state.patientName} />
                     : <Text>No Medication</Text>
