@@ -1,37 +1,38 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import colors from '../colors'
 
 function NewMed() {
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>Family Network</Text>
-      {/* <View style={styles.inputView}>
-              <TextInput
-                style={styles.inputText}
-                placeholder="Email..."
-                placeholderTextColor="#003f5c"
-                onChangeText={(text) => this.setState({ email: text })}
-              />
-            </View>
-            <View style={styles.inputView}>
-              <TextInput
-                secureTextEntry
-                style={styles.inputText}
-                placeholder="Password..."
-                placeholderTextColor="#003f5c"
-                onChangeText={(text) => this.setState({ password: text })}
-              />
-            </View>
-            <TouchableOpacity>
-              <Text style={styles.forgot}>Forgot Password?</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.loginBtn}>
-              <Text style={styles.loginText}>LOGIN</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.loginText}>Signup</Text>
-            </TouchableOpacity> */}
+      <Text style={styles.logo}>Add a new medication</Text>
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.inputText}
+          placeholder="Medication name"
+          placeholderTextColor={colors.black}
+
+        />
+      </View>
+
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.inputText}
+          placeholder="Prescribed By Doctor Jane Smith"
+          placeholderTextColor={colors.black}
+
+        />
+      </View>
+
+      <TouchableOpacity>
+        <Text style={styles.forgot}>Forgot Password?</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.loginBtn}>
+        <Text style={styles.loginText}>Add medication</Text>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Text style={styles.loginText}>Signup</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -39,19 +40,20 @@ function NewMed() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#003f5c",
+    backgroundColor: colors.white,
     alignItems: "center",
     justifyContent: "center",
   },
   logo: {
     fontWeight: "bold",
-    fontSize: 50,
-    color: "#fb5b5a",
+    fontSize: 28,
+    width: '80%',
+    color: colors.bright,
     marginBottom: 40,
   },
   inputView: {
     width: "80%",
-    backgroundColor: "#465881",
+    backgroundColor: colors.muted,
     borderRadius: 25,
     height: 50,
     marginBottom: 20,
@@ -60,15 +62,15 @@ const styles = StyleSheet.create({
   },
   inputText: {
     height: 50,
-    color: "white",
+    color: colors.white,
   },
   forgot: {
-    color: "white",
+    color: colors.white,
     fontSize: 11,
   },
   loginBtn: {
     width: "80%",
-    backgroundColor: "#fb5b5a",
+    backgroundColor: colors.bright,
     borderRadius: 25,
     height: 50,
     alignItems: "center",

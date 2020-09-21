@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import colors from '../colors';
 
 class Medication extends Component {
@@ -25,18 +25,25 @@ class Medication extends Component {
                 display: 'flex',
                 justifyContent: 'flex-start',
                 alignItems: 'center',
-                width: '70%',
+                width: '75%',
                 padding: 10,
                 textAlign: 'center'
-            }}
-                onClick={this.toggleOpen}>
+            }}>
                 <View style={{ display: 'flex', flexDirection: 'row' }}>
-                    <Text style={{ padding: 5, color: colors.black }}>{this.props.med.name}</Text>
-                    <Text style={{ padding: 5, color: colors.black }}>{this.props.med.dose}</Text>
-                    {this.props.med.takeDaily
-                        ? <Text style={{ padding: 5, color: colors.black }}>daily</Text>
-                        : null
-                    }
+                    <TouchableOpacity
+                        onPress={this.toggleOpen}
+                        style={{
+                            width: "100%",
+                            display: 'flex',
+                            flexDirection: 'row'
+                        }}>
+                        <Text style={{ padding: 5, color: colors.black }}>{this.props.med.name}</Text>
+                        <Text style={{ padding: 5, color: colors.black }}>{this.props.med.dose}</Text>
+                        {this.props.med.takeDaily
+                            ? <Text style={{ padding: 5, color: colors.black }}>daily</Text>
+                            : null
+                        }
+                    </TouchableOpacity>
                 </View>
                 {this.state.expanded === true
                     ? <View>

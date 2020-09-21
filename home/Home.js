@@ -37,8 +37,7 @@ class Home extends React.Component {
         return (
 
             <View style={{ width: '100%', height: '100%', display: 'flex' }}>
-                <Button onPress={() => this.props.navigation.navigate('Medications')}>
-                    Route to medication </Button>
+                <Button title="Go To Medication" onPress={() => this.props.navigation.navigate('Medications')} />
                 {
                     this.state.showRefill === true
                         ? <Medication
@@ -47,7 +46,7 @@ class Home extends React.Component {
                         : null
                 }
 
-                < Calendar calendar={this.state.user.calendar} />
+                <Calendar calendar={this.state.user.calendar} />
             </View >
 
 
