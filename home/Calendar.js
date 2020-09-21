@@ -7,9 +7,10 @@ function Calendar(props) {
 
     return (
         <ScrollView style={{
-            backgroundColor: colors.white
+            backgroundColor: colors.white,
+            width: '100%'
         }}>
-            <WeeklyCalendar events={props.calendar} themeColor={colors.bright} />
+            <WeeklyCalendar events={props.calendar} themeColor={colors.bright} style={{ width: '100%' }} />
         </ScrollView>
     )
 

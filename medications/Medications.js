@@ -6,7 +6,7 @@ import Medication from './Medication'
 
 function Medications(props) {
     //filter daily medications
-
+    console.log(props.meds)
     const dailyMeds = props.meds.filter(med => med.takeDaily === true)
 
     console.log(props.meds)
@@ -21,7 +21,8 @@ function Medications(props) {
         }}>
 
 
-            < Text style={{ fontSize: 25, textAlign: 'center', paddingTop: 15, color: colors.black }}>Medications</Text>
+            < Text
+                style={{ fontSize: 25, textAlign: 'center', paddingTop: 15, color: colors.black }}>Medications</Text>
             <TouchableOpacity style={{
                 width: "80%",
                 backgroundColor: colors.bright,
@@ -32,7 +33,9 @@ function Medications(props) {
                 justifyContent: "center",
                 marginTop: 40,
                 marginBottom: 10,
-            }}>
+            }}
+                onPress={() => props.navigation.navigate('NewMed')}
+            >
                 <Text style={{
                     fontSize: 16,
                     color: "white",

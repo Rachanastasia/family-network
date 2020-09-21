@@ -1,11 +1,17 @@
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from "expo-status-bar";
-import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import colors from './colors'
 import Home from "./home/Home";
-import Medications from './medications/Medications'
-import STORE from './STORE'
-import Loginscreen from "./Login";
+import Medications from './medications/Medications';
+import NewMed from './medications/NewMed';
+import Login from "./Login";
+import STORE from './STORE';
+
+const Stack = createStackNavigator();
 
 export default class App extends React.Component {
   //still be main componenet
@@ -25,14 +31,20 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <>
-        <Medications meds={this.state.user.medications} />
-        {/* {
-          (this.state.isLoggedIn === true)
-            ? <Home state={this.state.user} />
-            : <Loginscreen />
-        } */}
-      </>
+      <NavigationContainer>
+        <Stack.Navigator initailRouteName="Home">
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Medications">
+            {props => {
+              return (
+                <Medications {...props} meds={this.state.user.medications} />
+              )
+            }
+            }</Stack.Screen>
+          <Stack.Screen name="NewMed" component={NewMed} />
+          <Stack.Screen name="Login" component={Login} />
+        </Stack.Navigator>
+      </NavigationContainer>
     );
   }
 }

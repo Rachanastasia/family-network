@@ -1,6 +1,8 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-
+import * as React from 'react';
+import { View, Text, TouchableOpacity, Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import STORE from '../STORE';
 import Calendar from './Calendar';
 import Medication from './MedRefilBanner';
 
@@ -10,12 +12,13 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showRefill: false
+            showRefill: false,
+            user: STORE
         }
     }
 
     componentDidMount() {
-        const mapped = this.props.state.medications.filter(med => med.hasRefill == false)
+        const mapped = this.state.user.medications.filter(med => med.hasRefill == false)
         if (mapped.length > 0) {
 
             return this.setRefill(true)
@@ -34,11 +37,17 @@ class Home extends React.Component {
         return (
 
             <View style={{ width: '100%', height: '100%', display: 'flex' }}>
-                { this.state.showRefill === true
-                    ? <Medication meds={this.props.state.medications} patient={this.props.state.patientName} />
-                    : <Text>No Medication</Text>
+                <Button onPress={() => this.props.navigation.navigate('Medications')}>
+                    Route to medication </Button>
+                {
+                    this.state.showRefill === true
+                        ? <Medication
+                            meds={this.state.user.medications}
+                            patient={this.state.user.patientName} />
+                        : null
                 }
-                <Calendar calendar={this.props.state.calendar} />
+
+                < Calendar calendar={this.state.user.calendar} />
             </View >
 
 
