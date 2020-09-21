@@ -22,16 +22,8 @@ export default class App extends React.Component {
     }
   }
 
-  //lifecycle method to 
-  //reset user always if not logged in
-
-
-
-
   render() {
 
-    //Place login componenet after Home
-    //instead of Text Login
     return (
       <>
         <Medications meds={this.state.user.medications} />
@@ -54,6 +46,3 @@ const styles = StyleSheet.create({
   },
 });
 
-//There should be state in the component that renders the start screen
-//if true, show overview
-//if false, show main content

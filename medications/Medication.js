@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native'
+import { View, Text } from 'react-native';
+import colors from '../colors';
 
 class Medication extends Component {
     constructor(props) {
@@ -24,22 +25,23 @@ class Medication extends Component {
                 display: 'flex',
                 justifyContent: 'flex-start',
                 alignItems: 'center',
-                width: '100%',
-                padding: 10
+                width: '70%',
+                padding: 10,
+                textAlign: 'center'
             }}
                 onClick={this.toggleOpen}>
                 <View style={{ display: 'flex', flexDirection: 'row' }}>
-                    <Text style={{ padding: 5 }}>{this.props.med.name}</Text>
-                    <Text style={{ padding: 5 }}>{this.props.med.dose}</Text>
+                    <Text style={{ padding: 5, color: colors.black }}>{this.props.med.name}</Text>
+                    <Text style={{ padding: 5, color: colors.black }}>{this.props.med.dose}</Text>
                     {this.props.med.takeDaily
-                        ? <Text style={{ padding: 5 }}>daily</Text>
+                        ? <Text style={{ padding: 5, color: colors.black }}>daily</Text>
                         : null
                     }
                 </View>
                 {this.state.expanded === true
                     ? <View>
-                        <Text>Refill before {this.props.med.refillBefore}</Text>
-                        <Text>Prescribed by Dr.{this.props.med.contact}</Text>
+                        <Text style={{ padding: 5, color: colors.black }}>Refill before {this.props.med.refillBefore}</Text>
+                        <Text style={{ padding: 5, color: colors.black }}>Prescribed by Dr.{this.props.med.contact}</Text>
                         {this.props.med.takeWithFood
                             ? <Text>Take with a meal or snack</Text>
                             : null}

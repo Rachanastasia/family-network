@@ -6,6 +6,8 @@ const colors = {
     neutral: '#CCCCCC'
 
 }
+//accent
+
 
 export default colors;
 
