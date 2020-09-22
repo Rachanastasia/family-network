@@ -26,8 +26,7 @@ class Medication extends Component {
                 justifyContent: 'flex-start',
                 alignItems: 'center',
                 width: '75%',
-                padding: 10,
-                textAlign: 'center'
+                padding: 10
             }}>
                 <View style={{ display: 'flex', flexDirection: 'row' }}>
                     <TouchableOpacity

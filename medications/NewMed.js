@@ -1,40 +1,53 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import colors from '../colors'
+//put the name of a common medication in the phaceholder
+class NewMed extends React.Component {
+  //TAKE DAILY
+  //NUMBER OF REFILLS
+  //NEXT REFILL DATE
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.logo}>Add a new medication</Text>
+        <Text>Medication name :</Text>
+        <View style={styles.inputView}>
 
-function NewMed() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.logo}>Add a new medication</Text>
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.inputText}
-          placeholder="Medication name"
-          placeholderTextColor={colors.black}
+          <TextInput
+            style={styles.inputText}
+            placeholder="Medication name"
+            placeholderTextColor={colors.black}
 
-        />
+          />
+        </View>
+        <Text>Prescribed by :</Text>
+        <View style={styles.inputView}>
+
+          <TextInput
+            style={styles.inputText}
+            placeholder="Prescribed By Doctor Jane Smith"
+            placeholderTextColor={colors.black}
+
+          />
+        </View>
+        <Text>Doseage :</Text>
+        <View style={styles.inputView}>
+
+          <TextInput
+            style={styles.inputText}
+            placeholder="Recommended Dose 4mg daily"
+            placeholderTextColor={colors.black}
+
+          />
+        </View>
+
+        <TouchableOpacity style={styles.loginBtn}>
+          <Text style={styles.loginText}>Add medication</Text>
+        </TouchableOpacity>
+
       </View>
-
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.inputText}
-          placeholder="Prescribed By Doctor Jane Smith"
-          placeholderTextColor={colors.black}
-
-        />
-      </View>
-
-      <TouchableOpacity>
-        <Text style={styles.forgot}>Forgot Password?</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.loginText}>Add medication</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={styles.loginText}>Signup</Text>
-      </TouchableOpacity>
-    </View>
-  );
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -62,11 +75,8 @@ const styles = StyleSheet.create({
   },
   inputText: {
     height: 50,
-    color: colors.white,
-  },
-  forgot: {
-    color: colors.white,
-    fontSize: 11,
+    fontSize: 16,
+    color: colors.black,
   },
   loginBtn: {
     width: "80%",

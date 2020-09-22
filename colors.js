@@ -20,37 +20,26 @@ export default colors;
 //RACHELS NOTES PLEASE IGNORE
 ///////////////////////////////////////////////////////////////
 
+//TO DO
 
-    //take in data
-    //run through hook that filters by most recent date
+//PARSE DATES FOR MEDICATION
+//FORMAT DATES FOR UI
+
+//ADD STATE AND EVENT HANDLERS FOR NEWMED TO HANDLE TEXT INPUT
+//MAKE FACTORY FUNCTION FOR MEDICATION OBJECT
+//PREPARE DATA FOR POST REQUEST
+
+//MAKE MEDICAL CONTACT LIST
+//MAKE FAMILY CONTACT LIST
+
+//MAKE FORM FOR NEW MEDICAL CONTACT OR HOSPITAL
+
+//react-native-phone-call FOR PHONE CONNECTION
 
 
 
-    //QUESTIONS
-    //routing?
-    //icon library? react font awesome
-    //color variables??
-    //one file const.css
-    //global variables for colors
-    //import to every page used
-    //LEARN SASS
 
-    //date formatting
-    //UTC 
-    //address formatting
-    //just strings
-    //most companies have rules
-    //google api takes in user input and fills in 
-    //react native does formatting
-
-    //how to view my console.logs
-
-    //'soft' authentication system
-    //get api for contacts 
-    //library that is simple to use
-    //be associate to account
-
-    //API for medicin
+    //API for medicine
     //dropdown search for users
     //fetch data, run through dropdown
     //DROP DOWN LIBRARY
